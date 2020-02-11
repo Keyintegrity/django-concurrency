@@ -227,6 +227,7 @@ class TriggerVersionField(VersionField):
     def __init__(self, *args, **kwargs):
         self._trigger_name = kwargs.pop('trigger_name', None)
         self._trigger_exists = False
+        self._check_fields = kwargs.pop('check_fields', None)
         super(TriggerVersionField, self).__init__(*args, **kwargs)
 
     def contribute_to_class(self, cls, *args, **kwargs):

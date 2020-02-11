@@ -35,7 +35,7 @@ class Command(BaseCommand):
         add_parser = partial(_add_subparser, subparsers, parser)
 
         add_parser('list', help="list concurrency triggers")
-        add_parser('drop', help="drop  concurrency triggers")
+        add_parser('drop', help="drop concurrency triggers")
         add_parser('create', help="create concurrency triggers")
 
         parser.add_argument('-d', '--database',
